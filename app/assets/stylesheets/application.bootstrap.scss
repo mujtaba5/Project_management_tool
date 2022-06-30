@@ -1,0 +1,87 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'actiontext';
+*{
+  margin: 0;
+  padding: 0; 
+}
+
+// Masquerade alert shouldn't have a bottom margin
+body > .alert {
+  margin-bottom: 0;
+}
+
+// Homepage
+.top-header {
+  background-image: url('../../assets/images/rails.webp');
+}
+.header {
+  background: #2c3f88;
+  color: white;
+}
+.bi {
+  background: #2c3f88;
+  color: white;
+}
+
+.price {
+  color:white;
+  font-size: 150px;
+  font-weight: 800;
+  padding-top:-80% !important;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background: linear-gradient(to right, #472C88, #282963);
+  color: white;
+  height: auto;
+  padding:50px 0px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: white;
+  color: #222;
+  transform: rotateY(180deg);
+  padding:50px 0px;
+}
+
+// footer
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
